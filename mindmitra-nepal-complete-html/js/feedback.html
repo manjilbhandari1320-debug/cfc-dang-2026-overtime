@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Feedback | MindMitra Nepal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-sand text-forest">
+  <header class="site-header">
+    <div class="max-w-5xl mx-auto px-5 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/mindmitra-logo.png" alt="MindMitra Nepal" class="header-logo">
+        <span><b class="text-gold">MindMitra Nepal</b></span>
+      </a>
+      <a href="index.html" class="header-contact">Back to dashboard</a>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-5 py-12">
+    <section class="panel-card">
+      <span class="eyebrow">After your session</span>
+      <h1 class="section-title">How was your appointment?</h1>
+      <p class="copy">Your feedback helps improve counselling quality. Avoid including highly sensitive personal details.</p>
+
+      <form id="feedback-form" class="space-y-5 mt-8">
+        <div>
+          <label class="form-label">Overall rating</label>
+          <div class="rating-row" id="rating-row">
+            <button type="button" data-rating="1">★</button>
+            <button type="button" data-rating="2">★</button>
+            <button type="button" data-rating="3">★</button>
+            <button type="button" data-rating="4">★</button>
+            <button type="button" data-rating="5">★</button>
+          </div>
+          <input id="rating-value" type="hidden" required>
+        </div>
+
+        <label class="feedback-check"><input id="felt-listened" type="checkbox"><span>I felt listened to.</span></label>
+        <label class="feedback-check"><input id="helpful-session" type="checkbox"><span>The session was helpful.</span></label>
+        <label class="feedback-check"><input id="easy-to-join" type="checkbox"><span>The Google Meet session was easy to join.</span></label>
+        <label class="feedback-check"><input id="recommend-counsellor" type="checkbox"><span>I would recommend this counsellor.</span></label>
+
+        <div>
+          <label class="form-label">Optional feedback</label>
+          <textarea id="feedback-text" class="form-input min-h-32" placeholder="Share general feedback about the session experience."></textarea>
+        </div>
+
+        <button class="btn-gold w-full justify-center" type="submit">Submit feedback</button>
+        <p id="feedback-status" class="text-sm"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="simple-page-footer">
+    <span>Privacy · Terms · Help · Contact Us</span>
+    <span>© MindMitra Nepal</span>
+  </footer>
+
+  <script src="js/supabase-config.js"></script>
+  <script src="js/session-feedback.js"></script>
+</body>
+</html>

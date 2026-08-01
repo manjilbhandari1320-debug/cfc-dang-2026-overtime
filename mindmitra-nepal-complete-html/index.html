@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MindMitra Nepal</title>
-  <meta name="description" content="MindMitra Nepal — B2B mental wellness platform for organizations, counsellors, students and employees.">
+  <meta name="description" content="MindMitra Nepal — a privacy-first B2B mental wellness platform for organizations, counsellors, students and employees.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -14,113 +14,194 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-sand text-forest">
+
 <div id="toast" class="fixed right-5 bottom-5 z-[120]"></div>
 
 <div id="public-site">
-  <header class="sticky top-0 z-50 bg-sand/90 backdrop-blur border-b border-forest/10">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-3">
-        <img src="images/mind mitra logo (1).PNG" alt="MindMitra Logo" class="logo-mark">
-        <span><strong class="font-display text-lg">MindMitra</strong><small class="block text-[10px] tracking-[.25em] text-gold-dark font-bold">NEPAL</small></span>
+  <header class="site-header sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-5">
+      <a href="#home" class="brand-link flex items-center gap-3">
+        <img src="images/mindmitra-logo.png" alt="MindMitra Nepal logo" class="header-logo">
+        <span>
+          <strong class="font-display text-lg text-gold">MindMitra</strong>
+          <small class="block text-[10px] tracking-[.25em] text-gold-light font-bold">NEPAL</small>
+        </span>
       </a>
-      <nav class="hidden lg:flex gap-7 text-sm font-semibold">
-        <a href="#about">About</a><a href="#workflow">How It Works</a><a href="#features">Features</a><a href="#safety">Privacy</a><a href="#portals">Portals</a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#workflow">How It Works</a>
+        <a href="#features">Features</a><a href="#directory-preview">Counsellors</a>
+        <a href="#safety">Privacy</a>
+        
+        <a href="#contact">Contact Us</a>
       </nav>
-      <button data-open-auth="client" class="btn-primary">Login</button>
+
+      <div class="flex items-center gap-3">
+        <button data-open-auth="client" class="header-login">Login</button>
+      </div>
     </div>
   </header>
 
   <main>
-    <section id="home" class="hero">
+    <section id="home" class="hero reveal-section">
       <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-center">
         <div>
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mt-5">A safer path to mental wellness support.</h1>
-          <p class="text-gray-600 text-lg leading-8 mt-6">MindMitra Nepal is a B2B mental wellness platform for schools, colleges, universities, companies, NGOs and hospitals. It combines guided assessments, AI wellness summaries and verified counsellor support.</p>
+          
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mt-5">
+            A safer path to mental wellness support.
+          </h1>
+          <p class="text-gray-600 text-lg leading-8 mt-6">
+            MindMitra Nepal helps schools, colleges, companies, NGOs, hospitals and other organizations
+            support students and employees through guided assessments, AI wellness summaries and verified counsellors.
+          </p>
           <div class="flex flex-wrap gap-3 mt-8">
-            <a href="#portals" class="btn-gold">Choose your portal</a>
+            <button data-open-auth="client" class="btn-gold">Get started</button>
             <a href="#workflow" class="btn-outline">See how it works</a>
           </div>
           <div class="flex flex-wrap gap-5 mt-8 text-sm font-semibold text-forest/75">
-            <span>✓ Privacy-first</span><span>✓ Verified counsellors</span><span>✓ English & Nepali ready</span>
+            <span>✓ Privacy-first</span>
+            <span>✓ Anonymous counsellor option</span>
+            <span>✓ Verified counsellors</span>
           </div>
         </div>
+
         <div class="brand-card">
           <div class="shape a"></div><div class="shape b"></div>
-          <img src="images/mind mitra logo (1).PNG" alt="MindMitra Logo" class="w-full max-w-xs mx-auto">
+          <img src="images/mindmitra-logo.png" alt="MindMitra Nepal logo" class="hero-logo">
           <h2 class="font-display text-5xl font-bold mt-5">MindMitra</h2>
           <p class="tracking-[.4em] text-gold-dark text-sm mt-2">NEPAL</p>
           <div class="divider"></div>
           <p class="italic text-gray-500">Your companion for safer mental wellness support</p>
-          <div class="grid grid-cols-3 gap-3 mt-8 relative z-10">
-            <div class="mini-stat"><b>5</b><span>Secure roles</span></div>
-            <div class="mini-stat"><b>AI</b><span>Summaries</span></div>
-            <div class="mini-stat"><b>24/7</b><span>Crisis guidance</span></div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section bg-white">
+    <section id="about" class="section bg-white reveal-section">
       <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
-        <div class="visual-panel"><div class="orbit"><span>AI</span><span>Org</span><span>User</span><span>Care</span><b>MM</b></div></div>
+        <div class="about-logo-panel">
+          <div class="about-logo-glow"></div>
+          <img src="images/mindmitra-logo.png" alt="MindMitra Nepal logo" class="about-logo-image">
+          <p class="about-logo-caption">MindMitra Nepal</p>
+          <span>Safe support. Stronger minds.</span>
+        </div>
         <div>
           <span class="eyebrow">About MindMitra Nepal</span>
           <h2 class="section-title">Designed for organizations, built around personal privacy.</h2>
-          <p class="copy">Organizations create temporary accounts for students or employees. Users set a private password, accept consent terms, and complete a detailed assessment. AI creates a supportive summary and, when required, a separate counsellor-facing report.</p>
+          <p class="copy">
+            An Organization Admin creates temporary accounts for students or employees. Users change their password,
+            accept consent terms and may choose whether counsellors see their identity or an anonymous alias.
+            AI prepares a supportive user summary and a separate professional-review report when permission is provided.
+          </p>
           <div class="grid sm:grid-cols-2 gap-3 mt-8">
-            <div class="info-chip">Guided assessments</div><div class="info-chip">AI wellness reports</div><div class="info-chip">Verified counsellors</div><div class="info-chip">Anonymous analytics</div>
+            <div class="info-chip">Guided assessments</div>
+            <div class="info-chip">AI wellness reports</div>
+            <div class="info-chip">Anonymous counselling option</div>
+            <div class="info-chip">Privacy-safe organization insights</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="workflow" class="section bg-forest text-white">
+    <section id="workflow" class="section bg-forest text-white reveal-section">
       <div class="max-w-7xl mx-auto px-5 lg:px-8">
         <div class="text-center max-w-2xl mx-auto">
           <span class="eyebrow !text-gold">How it works</span>
-          <h2 class="section-title !text-white">From account creation to human support</h2>
+          <h2 class="section-title !text-white">From organization access to human support</h2>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
-          <article class="dark-step"><span>01</span><h3>Organization creates users</h3><p>Temporary usernames and passwords are created securely.</p></article>
-          <article class="dark-step"><span>02</span><h3>User completes assessment</h3><p>Questions are shown gradually with consent and progress.</p></article>
-          <article class="dark-step"><span>03</span><h3>AI prepares summaries</h3><p>Supportive guidance is generated without diagnosis.</p></article>
-          <article class="dark-step"><span>04</span><h3>Counsellor reviews</h3><p>Verified counsellors review only authorized reports.</p></article>
+          <article class="dark-step"><span>01</span><h3>Organization Admin creates users</h3><p>Students and employees receive secure temporary credentials.</p></article>
+          <article class="dark-step"><span>02</span><h3>User chooses privacy</h3><p>They may share their identity or use an anonymous counsellor alias.</p></article>
+          <article class="dark-step"><span>03</span><h3>AI prepares summaries</h3><p>The platform gives supportive guidance without making a diagnosis.</p></article>
+          <article class="dark-step"><span>04</span><h3>Counsellor reviews</h3><p>Verified counsellors see only authorized information and the chosen display identity.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="features" class="section">
+    <section id="features" class="section reveal-section">
       <div class="max-w-7xl mx-auto px-5 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto"><span class="eyebrow">Core features</span><h2 class="section-title">A complete B2B wellness workflow</h2></div>
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="eyebrow">Core features</span>
+          <h2 class="section-title">A complete B2B wellness workflow</h2>
+        </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-          <article class="feature-card"><div>🧠</div><h3>Wellness Assessment</h3><p>Multi-step questions covering stress, sleep, pressure, relationships, safety and support.</p></article>
+          <article class="feature-card"><div>🧠</div><h3>Wellness Assessment</h3><p>Step-by-step questions covering stress, sleep, pressure, relationships, safety and support.</p></article>
           <article class="feature-card"><div>✨</div><h3>AI Wellness Report</h3><p>Summaries, strengths, concerns and safe next steps without medical diagnosis.</p></article>
-          <article class="feature-card"><div>🩺</div><h3>Counsellor Directory</h3><p>Verified profiles with specialities, languages, experience and availability.</p></article>
-          <article class="feature-card"><div>📅</div><h3>Appointments</h3><p>Request, approve, reject, reschedule, confirm and complete sessions.</p></article>
-          <article class="feature-card"><div>🆘</div><h3>Crisis Support</h3><p>Admin-managed helplines and clear instructions for immediate help.</p></article>
-          <article class="feature-card"><div>📊</div><h3>Anonymous Insights</h3><p>Organizations view participation and group trends, not private answers.</p></article>
+          <article class="feature-card"><div>📍</div><h3>Nearby Counsellors</h3><p>Find verified counsellors based on your current location, address and service area.</p></article><article class="feature-card"><div>🕶️</div><h3>Anonymous Counselling</h3><p>Users may appear to counsellors using a generated alias while the platform keeps identity protected.</p></article>
+          <article class="feature-card"><div>📅</div><h3>Appointments</h3><p>Request, approve, reschedule, confirm and complete sessions securely.</p></article>
+          <article class="feature-card"><div>✉️</div><h3>Wellness Reminders</h3><p>Appointment follow-ups and monthly wellness emails are scheduled through Supabase.</p></article>
+          <article class="feature-card"><div>📊</div><h3>Anonymous Insights</h3><p>Organization Admins view participation and group trends, never private individual answers by default.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="safety" class="section bg-gold-light/30">
+    <section id="safety" class="section bg-gold-light/30 reveal-section">
       <div class="max-w-7xl mx-auto px-5 lg:px-8">
         <div class="safety-card">
-          <div><span class="eyebrow">Privacy & Safety</span><h2 class="section-title">Sensitive information deserves strong protection.</h2><p class="copy">Supabase Authentication, PostgreSQL and Row Level Security separate access by role. Organizations cannot read private assessments. Counsellors access only assigned and consented reports.</p></div>
-          <div class="grid gap-3"><div class="security-row">🔒 Role-based access</div><div class="security-row">🛡️ Row Level Security</div><div class="security-row">✅ Counsellor verification</div><div class="security-row">📋 Consent and audit logs</div></div>
+          <div>
+            <span class="eyebrow">Privacy & Safety</span>
+            <h2 class="section-title">Sensitive information deserves strong protection.</h2>
+            <p class="copy">
+              Supabase Authentication, PostgreSQL and Row Level Security separate access by role.
+              Organization Admins cannot read private assessments. Counsellors access only assigned,
+              consented reports and see an alias whenever the client selects anonymous mode.
+            </p>
+          </div>
+          <div class="grid gap-3">
+            <div class="security-row">🔒 Role-based access</div>
+            <div class="security-row">🛡️ Row Level Security</div>
+            <div class="security-row">🕶️ Anonymous identity preference</div>
+            <div class="security-row">📋 Consent and audit logs</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="portals" class="section bg-white">
+
+    <section id="directory-preview" class="section bg-white reveal-section">
       <div class="max-w-7xl mx-auto px-5 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto"><span class="eyebrow">Role-based portals</span><h2 class="section-title">Choose the correct MindMitra panel</h2><p class="copy">Each panel has separate permissions, navigation and data visibility.</p></div>
-        <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-4 mt-12">
-          <button data-open-auth="client" class="portal-card"><span>👤</span><b>Student / Employee</b><small>Assessments, reports, counsellors and appointments</small></button>
-          <button data-open-auth="counsellor" class="portal-card"><span>🩺</span><b>Counsellor</b><small>Availability, appointments and authorized reports</small></button>
-          <button data-open-auth="organization" class="portal-card"><span>🏢</span><b>Organization</b><small>Create users and view anonymous insights</small></button>
-          <button data-open-auth="admin" class="portal-card"><span>🛡️</span><b>Admin</b><small>Operations, content and counsellor approvals</small></button>
-          <button data-open-auth="super_admin" class="portal-card"><span>👑</span><b>Super Admin</b><small>Global security, administrators and settings</small></button>
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <div>
+            <span class="eyebrow">Verified counsellors</span>
+            <h2 class="section-title">Find support that is closer to you.</h2>
+            <p class="copy max-w-2xl">Browse verified counsellors by speciality, city and distance. Your location is requested only after you press the nearby-search button.</p>
+          </div>
+          <button id="public-find-nearby" class="btn-gold">📍 Find nearby counsellors</button>
+        </div>
+        <div id="public-counsellor-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+          <article class="public-counsellor-card skeleton-card"><div class="skeleton-line w-1/2"></div><div class="skeleton-line"></div><div class="skeleton-line w-2/3"></div></article>
+          <article class="public-counsellor-card skeleton-card"><div class="skeleton-line w-1/2"></div><div class="skeleton-line"></div><div class="skeleton-line w-2/3"></div></article>
+          <article class="public-counsellor-card skeleton-card"><div class="skeleton-line w-1/2"></div><div class="skeleton-line"></div><div class="skeleton-line w-2/3"></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section reveal-section">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="contact-card">
+          <div>
+            <span class="eyebrow !text-gold">Contact Us</span>
+            <h2 class="section-title !text-white">Talk with the MindMitra Nepal team.</h2>
+            <p class="text-white/70 mt-4">For organization onboarding, counsellor applications, partnerships or platform support.</p>
+            <div class="contact-details">
+              <p>✉️ hello@mindmitranepal.com</p>
+              <p>📍 Nepal</p>
+              <p>🕘 Sunday–Friday, 9:00 AM–5:00 PM</p>
+            </div>
+          </div>
+          <form id="contact-form" class="contact-form">
+            <input id="contact-name" placeholder="Your name" required>
+            <input id="contact-email" type="email" placeholder="Email address" required>
+            <select id="contact-topic">
+              <option>Organization onboarding</option>
+              <option>Counsellor application</option>
+              <option>Technical support</option>
+              <option>Partnership</option>
+              <option>Other</option>
+            </select>
+            <textarea id="contact-message" rows="4" placeholder="How can we help?" required></textarea>
+            <button class="btn-gold justify-center" type="submit">Send message</button>
+          </form>
         </div>
       </div>
     </section>
@@ -128,12 +209,21 @@
 
   <footer class="bg-forest-dark text-white/70 pt-16 pb-6">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-      <div><div class="flex items-center gap-3 text-white"><span class="logo-mark !bg-gold !text-forest">M</span><strong>MindMitra Nepal</strong></div><p class="text-sm mt-4">A privacy-first B2B mental wellness platform.</p></div>
-      <div><h4 class="footer-title">Platform</h4><a href="#about">About</a><a href="#workflow">How it works</a><a href="#features">Features</a></div>
-      <div><h4 class="footer-title">Support</h4><a href="#safety">Privacy</a><a href="#portals">Login</a><a href="#">Crisis support</a></div>
+      <div>
+        <div class="flex items-center gap-3 text-white">
+          <img src="images/mindmitra-logo.png" alt="" class="footer-logo">
+          <strong>MindMitra Nepal</strong>
+        </div>
+        <p class="text-sm mt-4">A privacy-first B2B mental wellness platform.</p>
+      </div>
+      <div><h4 class="footer-title">Platform</h4><a href="#about">About</a><a href="#workflow">How it works</a><a href="#features">Features</a><a href="#directory-preview">Counsellors</a></div>
+      <div><h4 class="footer-title">Support</h4><a href="#safety">Privacy & Safety</a><a href="#contact">Contact Us</a><button data-open-auth="client" class="footer-login-link">Login</button><a href="#">Crisis Support</a></div>
       <div><h4 class="footer-title">Important</h4><p class="text-sm">MindMitra Nepal is not an emergency service and does not replace professional medical care.</p></div>
     </div>
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 mt-12 pt-5 border-t border-white/10 text-xs flex justify-between"><span>© <span id="year"></span> MindMitra Nepal</span><span>Privacy · Terms · Consent</span></div>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 mt-12 pt-5 border-t border-white/10 text-xs flex flex-wrap gap-4 justify-between">
+      <span>© <span id="year"></span> MindMitra Nepal</span>
+      <span><a href="#safety">Privacy</a> · <a href="#safety">Terms</a> · <a href="#safety">Informed Consent</a> · <a href="#contact">Contact Us</a></span>
+    </div>
   </footer>
 </div>
 
@@ -141,23 +231,68 @@
   <div class="min-h-full flex items-center justify-center">
     <section class="w-full max-w-xl bg-sand rounded-3xl p-7 relative">
       <button id="close-auth" class="absolute right-4 top-4 w-10 h-10 rounded-full bg-white text-xl">×</button>
-      <div class="text-center"><span class="logo-mark mx-auto">M</span><h2 class="font-display text-2xl font-bold mt-4">Welcome to MindMitra Nepal</h2><p class="text-sm text-gray-500">Choose your role and sign in securely.</p></div>
-      <div class="grid grid-cols-2 sm:grid-cols-5 gap-1 bg-white rounded-2xl p-1.5 mt-6 text-xs font-bold">
-        <button data-auth-role="client" class="role-tab active">User</button><button data-auth-role="counsellor" class="role-tab">Counsellor</button><button data-auth-role="organization" class="role-tab">Organization</button><button data-auth-role="admin" class="role-tab">Admin</button><button data-auth-role="super_admin" class="role-tab">Super Admin</button>
+      <div class="text-center">
+        <img src="images/mindmitra-logo.png" alt="MindMitra Nepal logo" class="auth-logo mx-auto">
+        <h2 class="font-display text-2xl font-bold mt-4">Welcome to MindMitra Nepal</h2>
+        <p class="text-sm text-gray-500">Choose your role and sign in securely.</p>
       </div>
-      <div class="flex border-b mt-6"><button data-auth-mode="signin" class="mode-tab active">Sign In</button><button data-auth-mode="signup" class="mode-tab">Register</button></div>
-      <p id="restricted-note" class="hidden mt-4 p-3 bg-white rounded-xl text-xs">Admin and Super Admin accounts are invitation-only.</p>
+
+      <div class="grid grid-cols-3 gap-1 bg-white rounded-2xl p-1.5 mt-6 text-xs font-bold">
+        <button data-auth-role="client" class="role-tab active">User</button>
+        <button data-auth-role="counsellor" class="role-tab">Counsellor</button>
+        <button data-auth-role="organization_admin" class="role-tab">Org Admin</button>
+      </div>
+
+      <div class="flex border-b mt-6">
+        <button data-auth-mode="signin" class="mode-tab active">Sign In</button>
+        <button data-auth-mode="signup" class="mode-tab">Register</button>
+      </div>
+
+      <p id="restricted-note" class="hidden mt-4 p-3 bg-white rounded-xl text-xs">
+        Student and employee accounts are created by an Organization Admin.
+      </p>
+
       <form id="auth-form" class="mt-5 space-y-4">
         <div id="signup-fields" class="hidden space-y-4">
           <div><label class="form-label">Full name / Organization name</label><input id="full-name" class="form-input"></div>
-          <div id="org-type-wrap" class="hidden"><label class="form-label">Organization type</label><select id="org-type" class="form-input"><option>School</option><option>College</option><option>University</option><option>Company</option><option>NGO</option><option>Hospital</option></select></div>
-          <div id="counsellor-extra" class="hidden grid sm:grid-cols-2 gap-4"><input id="counsellor-phone" class="form-input" placeholder="Contact number"><input id="licence-number" class="form-input" placeholder="Licence number"></div>
+          <div id="org-type-wrap" class="hidden">
+            <label class="form-label">Organization type</label>
+            <select id="org-type" class="form-input"><option>School</option><option>College</option><option>University</option><option>Company</option><option>NGO</option><option>Hospital</option></select>
+          </div>
+          <div id="counsellor-extra" class="hidden space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <input id="counsellor-phone" class="form-input" placeholder="Contact number">
+              <input id="licence-number" class="form-input" placeholder="Licence number">
+            </div>
+            <input id="counsellor-address" class="form-input" placeholder="Clinic or workplace address">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <input id="counsellor-city" class="form-input" placeholder="City / District">
+              <input id="counsellor-province" class="form-input" placeholder="Province">
+            </div>
+            <button type="button" id="capture-counsellor-location" class="w-full border border-forest/20 py-3 rounded-xl font-bold">
+              Use current location
+            </button>
+            <input id="counsellor-latitude" type="hidden">
+            <input id="counsellor-longitude" type="hidden">
+          </div>
         </div>
-        <div><label class="form-label">Email or username</label><input id="auth-email" class="form-input" required></div>
-        <div><label class="form-label">Password</label><input id="auth-password" type="password" class="form-input" required></div>
-        <p id="first-login-note" class="hidden p-3 rounded-xl bg-gold-light/40 text-xs">Student and employee accounts are created by an organization. On first login, users must change the temporary password and accept consent.</p>
+
+        <div><label class="form-label">Email address</label><input id="auth-email" type="email" autocomplete="email" class="form-input" required></div>
+        <div><label class="form-label">Password</label><div class="password-field"><input id="auth-password" type="password" autocomplete="current-password" class="form-input" required><button type="button" id="toggle-auth-password">Show</button></div></div>
+
+        <div id="anonymous-choice" class="hidden anonymous-box">
+          <label class="flex items-start gap-3">
+            <input id="anonymous-toggle" type="checkbox" class="mt-1">
+            <span><b>Use an anonymous identity with counsellors</b><small class="block text-gray-500 mt-1">Counsellors will see a generated alias instead of your real name. MindMitra retains your account identity securely for platform operations.</small></span>
+          </label>
+          <input id="anonymous-alias" class="form-input mt-3 hidden" placeholder="Optional alias, e.g. Mitra-4821">
+        </div>
+
+        <p id="first-login-note" class="hidden p-3 rounded-xl bg-gold-light/40 text-xs">
+          Student and employee accounts are created by an Organization Admin. On first login, users must change the temporary password, accept consent and choose identity-sharing preferences.
+        </p>
         <p id="auth-error" class="hidden text-red-600 text-sm"></p>
-        <button id="auth-submit" class="w-full bg-gold py-3.5 rounded-xl font-bold">Sign In</button>
+        <button id="auth-submit" class="w-full bg-gold py-3.5 rounded-xl font-bold transition-all">Sign In</button><div id="auth-loading" class="hidden loading-row"><span class="spinner"></span><span>Working securely…</span></div>
         <button type="button" id="demo-login" class="w-full border border-forest/20 py-3 rounded-xl font-bold">Open demo panel</button>
       </form>
     </section>
@@ -166,19 +301,38 @@
 
 <div id="role-app" class="hidden min-h-screen bg-[#f4f3ec]">
   <aside id="sidebar" class="sidebar">
-    <div class="p-5 border-b border-white/10"><div class="flex items-center gap-3"><span class="logo-mark !bg-gold !text-forest">M</span><span><b class="text-white">MindMitra</b><small id="sidebar-role" class="block text-[10px] text-white/50 uppercase"></small></span></div></div>
+    <div class="p-5 border-b border-white/10">
+      <div class="flex items-center gap-3">
+        <img src="images/mindmitra-logo.png" alt="" class="sidebar-logo">
+        <span><b class="text-gold">MindMitra</b><small id="sidebar-role" class="block text-[10px] text-gold-light/70 uppercase"></small></span>
+      </div>
+    </div>
     <nav id="sidebar-nav" class="p-3 flex-1 overflow-y-auto"></nav>
     <div class="p-4 border-t border-white/10"><button id="logout" class="sidebar-link">↪ Log out</button></div>
   </aside>
+
   <div class="lg:ml-72 min-h-screen">
-    <header class="h-20 bg-white border-b flex items-center justify-between px-5 lg:px-8 sticky top-0 z-30">
-      <div class="flex items-center gap-3"><button id="menu-btn" class="lg:hidden w-10 h-10 rounded-xl bg-gray-100">☰</button><div><h1 id="page-title" class="font-display text-xl font-bold"></h1><p id="page-subtitle" class="text-xs text-gray-500"></p></div></div>
-      <div class="flex items-center gap-3"><button id="crisis-shortcut" class="hidden bg-red-600 text-white text-sm font-bold px-4 py-2 rounded-full">Get Immediate Help</button><span id="user-badge" class="w-10 h-10 rounded-full bg-gold grid place-items-center font-bold">M</span></div>
+    <header class="app-header h-20 flex items-center justify-between px-5 lg:px-8 sticky top-0 z-30">
+      <div class="flex items-center gap-3">
+        <button id="menu-btn" class="lg:hidden w-10 h-10 rounded-xl bg-gold text-forest">☰</button>
+        <div><h1 id="page-title" class="font-display text-xl font-bold text-gold"></h1><p id="page-subtitle" class="text-xs text-gold-light/75"></p></div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="crisis-shortcut" class="hidden bg-red-600 text-white text-sm font-bold px-4 py-2 rounded-full">Get Immediate Help</button>
+        <a href="#contact" id="panel-contact" class="text-gold text-sm font-bold">Contact Us</a>
+        <span id="user-badge" class="w-10 h-10 rounded-full bg-gold grid place-items-center font-bold text-forest">M</span>
+      </div>
     </header>
+
     <main id="panel-content" class="p-5 lg:p-8 max-w-[1500px] mx-auto"></main>
-    <footer class="px-5 lg:px-8 py-6 text-xs text-gray-500 flex justify-between"><span>Privacy · Terms · Help · Crisis Support . Contact Us</span><span>© MindMitra Nepal</span></footer>
+
+    <footer class="px-5 lg:px-8 py-6 text-xs text-gray-500 flex flex-wrap gap-4 justify-between">
+      <span><button data-footer-page="privacy">Privacy</button> · <button data-footer-page="resources">Help</button> · <button data-footer-page="crisis">Crisis Support</button> · <button id="footer-contact-link">Contact Us</button></span>
+      <span>© MindMitra Nepal</span>
+    </footer>
   </div>
 </div>
+
 <script src="js/supabase-config.js"></script>
 <script src="js/app.js"></script>
 </body>

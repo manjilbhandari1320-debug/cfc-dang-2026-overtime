@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counsellor Report | MindMitra Nepal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-sand text-forest">
+  <header class="site-header">
+    <div class="max-w-5xl mx-auto px-5 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/mindmitra-logo.png" alt="MindMitra Nepal" class="header-logo">
+        <span><b class="text-gold">MindMitra Nepal</b></span>
+      </a>
+      <a href="index.html" class="header-contact">Back to counsellor portal</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-5 py-12">
+    <section class="panel-card">
+      <span class="eyebrow">After-session documentation</span>
+      <h1 class="section-title">Counsellor report and notes</h1>
+
+      <div class="note-privacy-banner mt-6">
+        <b>Private notes are not published.</b>
+        <p>Only the separate organization-safe report can be shared, and only after client consent is confirmed.</p>
+      </div>
+
+      <form id="report-form" class="space-y-5 mt-7">
+        <div>
+          <label class="form-label">Private counsellor notes</label>
+          <textarea id="private-notes" class="form-input min-h-44" placeholder="Private professional notes visible only to the counsellor."></textarea>
+        </div>
+
+        <div>
+          <label class="form-label">Follow-up recommendation</label>
+          <textarea id="followup-recommendation" class="form-input min-h-28" placeholder="Recommended next steps for the client."></textarea>
+        </div>
+
+        <div>
+          <label class="form-label">Organization-safe report</label>
+          <textarea id="organization-report" class="form-input min-h-36" placeholder="Only non-sensitive, action-oriented information suitable for the Organization Admin."></textarea>
+        </div>
+
+        <label class="privacy-choice">
+          <input id="consent-confirmed" type="checkbox">
+          <span><b>Client consent confirmed</b><small class="block text-gray-500">Required before publishing an organization-safe report.</small></span>
+        </label>
+
+        <div class="flex flex-wrap gap-3">
+          <button id="save-report" type="button" class="btn-outline">Save private notes</button>
+          <button id="publish-report" type="button" class="btn-gold">Publish organization-safe report</button>
+        </div>
+
+        <p id="report-status" class="text-sm"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="simple-page-footer">
+    <span>Privacy · Terms · Help · Contact Us</span>
+    <span>© MindMitra Nepal</span>
+  </footer>
+
+  <script src="js/supabase-config.js"></script>
+  <script src="js/counsellor-report.js"></script>
+</body>
+</html>
