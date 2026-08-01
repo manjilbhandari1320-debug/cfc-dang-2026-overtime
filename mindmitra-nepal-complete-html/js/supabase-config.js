@@ -1,2 +1,2 @@
-window.MINDMITRA_SUPABASE_URL='https://YOUR_PROJECT_REF.supabase.co';
-window.MINDMITRA_SUPABASE_ANON_KEY='YOUR_SUPABASE_ANON_KEY';
+window.MINDMITRA_SUPABASE_URL='https://ofdgduymhajrrdwgeglk.supabase.co';
+window.MINDMITRA_SUPABASE_ANON_KEY='sb_publishable_03KkZjj5mNDN1l3QHnmALA_dYKQ8qWJ';
