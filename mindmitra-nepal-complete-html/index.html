@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind-config.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-sand text-forest">
@@ -21,7 +20,7 @@
   <header class="site-header sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between gap-5">
       <a href="#home" class="brand-link flex items-center gap-3">
-        <img src="images/mind mitra logo (1).PNG" alt="MindMitra Nepal logo" class="header-logo">
+        <img src="images/mind_mitra_logo.PNG" alt="MindMitra Nepal logo" class="header-logo">
         <span>
           <strong class="font-display text-lg text-gold">MindMitra</strong>
           <small class="block text-[10px] tracking-[.25em] text-gold-light font-bold">NEPAL</small>
@@ -68,7 +67,7 @@
 
         <div class="brand-card">
           <div class="shape a"></div><div class="shape b"></div>
-          <img src="images/mind mitra logo (1).PNG" alt="MindMitra Nepal logo" class="hero-logo">
+          <img src="images/mind_mitra_logo.PNG" alt="MindMitra Nepal logo" class="hero-logo">
           <h2 class="font-display text-5xl font-bold mt-5">MindMitra</h2>
           <p class="tracking-[.4em] text-gold-dark text-sm mt-2">NEPAL</p>
           <div class="divider"></div>
@@ -81,7 +80,7 @@
       <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
         <div class="about-logo-panel">
           <div class="about-logo-glow"></div>
-          <img src="images/mind mitra logo (1).PNG" alt="MindMitra Nepal logo" class="about-logo-image">
+          <img src="images/mind_mitra_logo.PNG" alt="MindMitra Nepal logo" class="about-logo-image">
           <p class="about-logo-caption">MindMitra Nepal</p>
           <span>Safe support. Stronger minds.</span>
         </div>
@@ -129,7 +128,7 @@
           <article class="feature-card"><div>✨</div><h3>AI Wellness Report</h3><p>Summaries, strengths, concerns and safe next steps without medical diagnosis.</p></article>
           <article class="feature-card"><div>📍</div><h3>Nearby Counsellors</h3><p>Find verified counsellors based on your current location, address and service area.</p></article><article class="feature-card"><div>🕶️</div><h3>Anonymous Counselling</h3><p>Users may appear to counsellors using a generated alias while the platform keeps identity protected.</p></article>
           <article class="feature-card"><div>📅</div><h3>Appointments</h3><p>Request, approve, reschedule, confirm and complete sessions securely.</p></article>
-          <article class="feature-card"><div>✉️</div><h3>Wellness Reminders</h3><p>Appointment follow-ups and monthly wellness emails are scheduled through Supabase.</p></article>
+          <article class="feature-card"><div>✉️</div><h3>Wellness Reminders</h3><p>Appointment follow-ups and monthly wellness emails are queued securely in Neon PostgreSQL.</p></article>
           <article class="feature-card"><div>📊</div><h3>Anonymous Insights</h3><p>Organization Admins view participation and group trends, never private individual answers by default.</p></article>
         </div>
       </div>
@@ -142,7 +141,7 @@
             <span class="eyebrow">Privacy & Safety</span>
             <h2 class="section-title">Sensitive information deserves strong protection.</h2>
             <p class="copy">
-              Supabase Authentication, PostgreSQL and Row Level Security separate access by role.
+              Server-side authentication, Neon PostgreSQL and API authorization separate access by role.
               Organization Admins cannot read private assessments. Counsellors access only assigned,
               consented reports and see an alias whenever the client selects anonymous mode.
             </p>
@@ -211,7 +210,7 @@
     <div class="max-w-7xl mx-auto px-5 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <div>
         <div class="flex items-center gap-3 text-white">
-          <img src="images/mind mitra logo (1).PNG" alt="MindMitra Nepal logo" class="footer-logo">
+          <img src="images/mind_mitra_logo.PNG" alt="MindMitra Nepal logo" class="footer-logo">
           <strong>MindMitra Nepal</strong>
         </div>
         <p class="text-sm mt-4">A privacy-first B2B mental wellness platform.</p>
@@ -232,7 +231,7 @@
     <section class="w-full max-w-xl bg-sand rounded-3xl p-7 relative">
       <button id="close-auth" class="absolute right-4 top-4 w-10 h-10 rounded-full bg-white text-xl">×</button>
       <div class="text-center">
-        <img src="images/mind mitra logo (1).PNG" alt="MindMitra Nepal logo" class="auth-logo mx-auto">
+        <img src="images/mind_mitra_logo.PNG" alt="MindMitra Nepal logo" class="auth-logo mx-auto">
         <h2 class="font-display text-2xl font-bold mt-4">Welcome to MindMitra Nepal</h2>
         <p class="text-sm text-gray-500">Choose your role and sign in securely.</p>
       </div>
@@ -255,10 +254,6 @@
       <form id="auth-form" class="mt-5 space-y-4">
         <div id="signup-fields" class="hidden space-y-4">
           <div><label class="form-label">Full name / Organization name</label><input id="full-name" class="form-input"></div>
-          <div id="org-type-wrap" class="hidden">
-            <label class="form-label">Organization type</label>
-            <select id="org-type" class="form-input"><option>School</option><option>College</option><option>University</option><option>Company</option><option>NGO</option><option>Hospital</option></select>
-          </div>
           <div id="counsellor-extra" class="hidden space-y-4">
             <div class="grid sm:grid-cols-2 gap-4">
               <input id="counsellor-phone" class="form-input" placeholder="Contact number">
@@ -277,7 +272,12 @@
           </div>
         </div>
 
-        <div><label class="form-label">Email address</label><input id="auth-email" type="email" autocomplete="email" class="form-input" required></div>
+        <div id="org-type-wrap" class="hidden">
+          <label class="form-label">Organization type</label>
+          <select id="org-type" class="form-input"><option>School</option><option>College</option><option>University</option><option>Company</option><option>NGO</option><option>Hospital</option></select>
+        </div>
+
+        <div><label class="form-label">Email address or username</label><input id="auth-email" type="text" autocomplete="username" class="form-input" required></div>
         <div><label class="form-label">Password</label><div class="password-field"><input id="auth-password" type="password" autocomplete="current-password" class="form-input" required><button type="button" id="toggle-auth-password">Show</button></div></div>
 
         <div id="anonymous-choice" class="hidden anonymous-box">
@@ -303,7 +303,7 @@
   <aside id="sidebar" class="sidebar">
     <div class="p-5 border-b border-white/10">
       <div class="flex items-center gap-3">
-        <img src="" alt="" class="sidebar-logo">
+        <img src="images/mind_mitra_logo.PNG" alt="MindMitra Nepal logo" class="sidebar-logo">
         <span><b class="text-gold">MindMitra</b><small id="sidebar-role" class="block text-[10px] text-gold-light/70 uppercase"></small></span>
       </div>
     </div>
@@ -332,8 +332,8 @@
     </footer>
   </div>
 </div>
-
-<script src="js/supabase-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/api.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

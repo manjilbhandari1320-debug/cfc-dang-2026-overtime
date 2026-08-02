@@ -1,66 +1,37 @@
-# MindMitra Nepal — HTML/CSS/JS + Supabase
+# MindMitra Nepal — HTML/CSS/JS + Neon PostgreSQL
 
-This ZIP contains:
+MindMitra uses a Node.js API backed by Neon PostgreSQL. Database credentials are available only to the server and are never sent to browser JavaScript.
 
-- Public homepage explaining MindMitra Nepal
-- Student/Employee panel
-- Counsellor panel
-- Organization panel
-- Admin panel
-- Super Admin panel
-- Responsive dark forest, sand and gold UI
-- Supabase authentication connection
-- Starter PostgreSQL schema and RLS policies
-- Demo panel mode that works before Supabase is configured
+## Setup and run
 
-## Run the website
-
-Open PowerShell in the extracted folder:
+From the repository root:
 
 ```powershell
-npx serve .
+npm install
+npm run db:migrate
+npm start
 ```
 
-Open the local URL displayed in PowerShell.
+Then open `http://localhost:3000`.
 
-## Connect Supabase
+The `.env` file must contain `DATABASE_URL` with the Neon pooled PostgreSQL connection string. Never commit `.env` or place the connection string in HTML/JavaScript under `mindmitra-nepal-complete-html`.
 
-1. Create a Supabase project.
-2. Open **SQL Editor**.
-3. Run `supabase/schema.sql`.
-4. Open **Project Settings → API**.
-5. Copy the Project URL and anon/public key.
-6. Open `js/supabase-config.js`.
-7. Replace the placeholder values.
+## Authentication
 
-Never put the Supabase service-role key in frontend files.
+- Passwords are salted and hashed with Node.js `scrypt`.
+- Login verification happens only on the server.
+- Successful login creates a random, hashed database session and an HTTP-only, SameSite cookie.
+- Organization-created student and employee accounts can log in by email or username.
+- `client`, `counsellor`, `organization_admin`, and `super_admin` permissions are checked by API routes.
 
-## Test without Supabase
+## Database
 
-Open any login portal and click **Open demo panel**.
+The idempotent schema is in `neon/schema.sql`. Apply schema changes with:
 
-## Roles
+```powershell
+npm run db:migrate
+```
 
-- `client` — student or employee
-- `counsellor`
-- `organization`
-- `admin`
-- `super_admin`
+## Important production work
 
-Admin and Super Admin accounts should be invitation-only.
-
-## Important production work still required
-
-This package is a substantial frontend prototype and backend starter, not a finished clinical production system. Before real use, add:
-
-- Secure Edge Functions for organization-created users
-- Full assessment question database
-- AI backend service and safety review
-- Secure document storage
-- Malware scanning
-- MFA for counsellors/admins
-- Email notifications
-- Audit logging for all sensitive actions
-- Verified Nepal helpline data
-- Legal/privacy review
-- Full testing and penetration testing
+Before clinical production use, add MFA, password-reset/email-verification flows, a transactional email provider, Google Meet OAuth credentials, centralized rate limiting, encrypted backups, comprehensive audit coverage, and independent privacy/security review.
