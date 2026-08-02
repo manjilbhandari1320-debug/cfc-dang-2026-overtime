@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>MindMitra Nepal — Super Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-forest min-h-screen">
+  <main class="min-h-screen grid place-items-center p-5">
+    <section id="super-login" class="w-full max-w-md bg-sand rounded-3xl p-8 shadow-2xl">
+      <img src="images/mind_mitra_logo.PNG" alt="MindMitra Nepal" class="auth-logo mx-auto">
+      <h1 class="font-display text-2xl font-bold text-center mt-5">Super Admin Access</h1>
+      <p class="text-sm text-gray-500 text-center mt-2">Restricted platform administration portal.</p>
+      <form id="super-form" class="space-y-4 mt-6">
+        <div><label class="form-label">Email</label><input id="super-email" type="email" class="form-input" required></div>
+        <div><label class="form-label">Password</label><input id="super-password" type="password" class="form-input" required></div>
+        <p id="super-error" class="hidden text-red-600 text-sm"></p>
+        <button class="w-full bg-gold text-forest py-3.5 rounded-xl font-bold">Sign In</button>
+        <button id="super-demo" type="button" class="w-full border border-forest/20 py-3 rounded-xl font-bold">Open demo dashboard</button>
+      </form>
+    </section>
+
+    <section id="super-dashboard" class="hidden w-full min-h-screen bg-[#f4f3ec]">
+      <header class="app-header h-20 px-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img src="images/mind_mitra_logo.PNG" alt="MindMitra Nepal logo" class="sidebar-logo">
+          <div><h1 class="font-display text-xl font-bold text-gold">Super Admin Dashboard</h1><p class="text-xs text-gold-light/70">MindMitra Nepal</p></div>
+        </div>
+        <button id="super-logout" class="header-login">Log out</button>
+      </header>
+      <div class="p-6 lg:p-10 max-w-7xl mx-auto">
+        <div class="dashboard-grid">
+          <div class="stat-card"><small>Organizations</small><b>38</b></div>
+          <div class="stat-card"><small>Organization Admins</small><b>52</b></div>
+          <div class="stat-card"><small>Verified Counsellors</small><b>64</b></div>
+          <div class="stat-card"><small>Security Alerts</small><b>2</b></div>
+        </div>
+        <section class="panel-card mt-5">
+          <h2 class="font-bold text-lg">Global Administration</h2>
+          <div class="grid md:grid-cols-3 gap-4 mt-5">
+            <button class="info-chip text-left"><b>Counsellor Verification</b><p class="text-sm text-gray-500">Review licences and professional details.</p></button>
+            <button class="info-chip text-left"><b>Organization Management</b><p class="text-sm text-gray-500">Approve and manage organizations.</p></button>
+            <button class="info-chip text-left"><b>Reminder System</b><p class="text-sm text-gray-500">Monitor scheduled email jobs.</p></button>
+            <button class="info-chip text-left"><b>Security</b><p class="text-sm text-gray-500">MFA, access policies and alerts.</p></button>
+            <button class="info-chip text-left"><b>Plans & Billing</b><p class="text-sm text-gray-500">Manage B2B subscription plans.</p></button>
+            <button class="info-chip text-left"><b>Audit Logs</b><p class="text-sm text-gray-500">Review sensitive platform actions.</p></button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/super admin.js"></script>
+</body>
+</html>

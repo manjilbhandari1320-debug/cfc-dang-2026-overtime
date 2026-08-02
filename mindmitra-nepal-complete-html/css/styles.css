@@ -235,3 +235,51 @@ footer button:hover,footer a:hover{color:#eec14a}
 .feedback-check{display:flex;align-items:center;gap:10px;padding:14px;border:1px solid #e3e8e4;border-radius:14px;background:white}
 .simple-page-footer{max-width:960px;margin:20px auto 0;padding:24px 20px;border-top:1px solid #dde3df;color:#6d7874;font-size:.78rem;display:flex;justify-content:space-between;gap:18px}
 @media(max-width:700px){.appointment-card{align-items:flex-start;flex-direction:column}.appointment-actions{width:100%}.appointment-actions .action{width:100%;justify-content:center}.simple-page-footer{flex-direction:column}}
+.ai-summary-card {
+  border-left: 5px solid #eec14a;
+  background: linear-gradient(145deg, #ffffff, #fffdf5);
+}
+
+.ai-summary-card h3,
+.ai-summary-card h4 {
+  color: #0d2b26;
+}
+
+.ai-summary-card p {
+  line-height: 1.7;
+}
+
+.ai-disclaimer {
+  margin-top: 20px;
+  padding: 13px 15px;
+  border-radius: 13px;
+  background: #f2f5f2;
+  color: #68756f;
+  font-size: 0.78rem;
+}
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.chart-wrap {
+  height: 320px;
+  margin-top: 18px;
+  position: relative;
+}
+
+#org-dashboard-loading,
+#org-dashboard-error {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-wrap {
+    height: 280px;
+  }
+}
