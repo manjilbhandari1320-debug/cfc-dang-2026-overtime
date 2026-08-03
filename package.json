@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "start": "node --env-file=.env server.js",
+    "dev": "node --env-file=.env server.js",
     "db:migrate": "node --env-file=.env scripts/migrate-neon.js",
     "test": "node --env-file=.env scripts/smoke-test-neon.js"
   },
